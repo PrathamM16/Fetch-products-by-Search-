@@ -1,0 +1,59 @@
+/* styles.css */
+
+body {
+    background-color: #333; /* Dark grey background color */
+    color: #fff; /* Text color */
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Add borders to each product card */
+.card {
+    border: 2px solid #ffff; /* Black border color and width */
+    border-radius: 10px; /* Border radius for rounded corners */
+    margin-bottom: 20px; /* Spacing between product cards */
+    height: 500px; /* Fixed height for product cards (adjust as needed) */
+    overflow: hidden; /* Hide content that exceeds the card height */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Customize the appearance of the product cards as needed */
+.card-body {
+    background-color: #222; /* Dark grey background color for the card body */
+    color: #fff; /* Text color for the card body */
+    height: 100%; /* Fill the entire card height with content */
+}
+
+/* Add a hover effect to move the card up and down */
+.card:hover {
+    transform: translateY(-5px); /* Move the card up by 5px when hovered */
+}
+
+/* Style for "Products We Offer" heading */
+h1.text-primary {
+    position: relative;
+    color: #18a8c8; /* Text color for the heading */
+}
+
+h1.text-primary::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Adjust as needed to position the underline */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust as needed for the underline thickness */
+    background: linear-gradient(90deg, #c3c616, rgb(57, 119, 6), #6c1f1f);
+    background-size: 200% 2px;
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
